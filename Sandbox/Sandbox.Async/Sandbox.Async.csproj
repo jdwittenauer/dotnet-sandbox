@@ -4,16 +4,15 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{48AA3FF6-1B2B-4EE3-93C8-0FF690F2ABD7}</ProjectGuid>
-    <OutputType>Exe</OutputType>
+    <ProjectGuid>{02FF2EE8-39E7-4286-B9D3-12B91A0C67E2}</ProjectGuid>
+    <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Sanbox.Console</RootNamespace>
-    <AssemblyName>Sanbox.Console</AssemblyName>
+    <RootNamespace>Sandbox.Async</RootNamespace>
+    <AssemblyName>Sandbox.Async</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -23,7 +22,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -41,25 +39,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Program.cs" />
+    <Compile Include="Async.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Sandbox.Async\Sandbox.Async.csproj">
-      <Project>{02ff2ee8-39e7-4286-b9d3-12b91a0c67e2}</Project>
-      <Name>Sandbox.Async</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Sandbox.LINQ\Sandbox.LINQ.csproj">
-      <Project>{4c2d73b9-5253-4d8a-8b9b-ac6693dee75c}</Project>
-      <Name>Sandbox.LINQ</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Sandbox.TPL\Sandbox.TPL.csproj">
-      <Project>{c480515c-1f36-47c7-bc45-7c78dba49a1e}</Project>
-      <Name>Sandbox.TPL</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

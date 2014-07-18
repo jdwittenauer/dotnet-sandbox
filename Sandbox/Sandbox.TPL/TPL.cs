@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 namespace Sandbox.TPL
 {
     /// <summary>
-    /// Learning exercise for parallel processing and concurrency on the .NET framework.
+    /// Learning exercises for parallel processing and concurrency on the .NET framework.
     /// </summary>
     public static class TPL
     {
