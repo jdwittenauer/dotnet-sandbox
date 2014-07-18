@@ -5,14 +5,14 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace TPL
+namespace Sandbox.TPL
 {
     /// <summary>
     /// Learning exercise for parallel processing and concurrency on the .NET framework.
     /// </summary>
-    class Program
+    public static class TPL
     {
-        static void Main(string[] args)
+        public static void Run()
         {
             // Basic usage of tasks
             Task t1 = new Task(new Action(PrintMessage));
