@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.Concurrent;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading;
@@ -7,13 +9,14 @@ using System.Threading.Tasks;
 
 namespace Sandbox.TPL
 {
-    /// <summary>
-    /// Learning exercises for parallel processing and concurrency on the .NET framework.
-    /// </summary>
-    public static class TPL
+    public static class TaskExamples
     {
         public static void Run()
         {
+            Console.WriteLine("Task class examples");
+            Console.WriteLine("------------------------------");
+            Console.WriteLine("");
+
             // Basic usage of tasks
             Task t1 = new Task(new Action(PrintMessage));
             Task t2 = new Task(() => PrintMessage());

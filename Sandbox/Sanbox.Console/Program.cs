@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Sandbox.Async;
+﻿using Sandbox.Async;
 using Sandbox.LINQ;
 using Sandbox.TPL;
 
@@ -15,7 +10,8 @@ namespace Sanbox.Console
         {
             Async.Run();
             LINQ.Run();
-            TPL.Run();
+            TaskExamples.Run();
+            ParallelExample.Run();
         }
     }
 }
