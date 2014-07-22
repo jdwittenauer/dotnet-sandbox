@@ -9,15 +9,18 @@ using System.Threading.Tasks;
 
 namespace Sandbox.TPL
 {
+    /// <summary>
+    /// Exercise that uses parallel computation to speed up matrix calculations.
+    /// </summary>
     public static class ParallelExample
     {
         public static void Run()
         {
-            Console.WriteLine("Task parallelism example");
+            Console.WriteLine("Example using Parallel.For");
             Console.WriteLine("------------------------------");
             Console.WriteLine("");
 
-            // Setup a comparison of sequential vs. parallel for matrix multiplication
+            // Set up a comparison of sequential vs. parallel for matrix multiplication
             int colCount = 180;
             int rowCount = 2000;
             int colCount2 = 270;
@@ -45,9 +48,10 @@ namespace Sandbox.TPL
             stopwatch.Stop();
             Console.WriteLine("Parallel loop time in milliseconds: {0}", stopwatch.ElapsedMilliseconds);
 
-            // Keep the console window open in debug mode
             Console.WriteLine("Example complete.  Press a key to proceed.");
             Console.ReadKey();
+
+            Console.WriteLine("");
         }
 
         private static double[,] InitializeMatrix(int rows, int cols)

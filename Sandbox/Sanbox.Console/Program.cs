@@ -12,6 +12,10 @@ namespace Sanbox.Console
             LINQ.Run();
             TaskExamples.Run();
             ParallelExample.Run();
+            ParallelExample2.Run();
+            ParallelExample3.Run();
+            ConcurrentCollections.Run();
+            BlockingCollection.Run();
         }
     }
 }

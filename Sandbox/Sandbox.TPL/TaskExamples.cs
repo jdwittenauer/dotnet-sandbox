@@ -9,6 +9,10 @@ using System.Threading.Tasks;
 
 namespace Sandbox.TPL
 {
+    /// <summary>
+    /// Learning exercies for the task class.  Tasks are units of work that can be composed,
+    /// chained, arranged in hierarchies, and used for all sorts of concurrency patterns.
+    /// </summary>
     public static class TaskExamples
     {
         public static void Run()
@@ -17,6 +21,16 @@ namespace Sandbox.TPL
             Console.WriteLine("------------------------------");
             Console.WriteLine("");
 
+            Section1();
+            Section2();
+            Section3();
+            Section4();
+
+            Console.WriteLine("");
+        }
+
+        private static void Section1()
+        {
             // Basic usage of tasks
             Task t1 = new Task(new Action(PrintMessage));
             Task t2 = new Task(() => PrintMessage());
@@ -28,8 +42,10 @@ namespace Sandbox.TPL
 
             Console.WriteLine("Section 1 complete.  Press a key to proceed.");
             Console.ReadLine();
+        }
 
-
+        private static void Section2()
+        {
             // Task with a return type
             Task<int> t3 = new Task<int>(n => Sum((int)n), 1000);
             t3.Start();
@@ -38,8 +54,10 @@ namespace Sandbox.TPL
             Console.WriteLine("The sum is: " + t3.Result);
             Console.WriteLine("Section 2 complete.  Press a key to proceed.");
             Console.ReadLine();
+        }
 
-
+        private static void Section3()
+        {
             // Using a cancellation token
             CancellationTokenSource cts = new CancellationTokenSource();
             Task<int> t4 = new Task<int>(() => Sum(1000, cts.Token), cts.Token);
@@ -59,8 +77,10 @@ namespace Sandbox.TPL
 
             Console.WriteLine("Section 3 complete.  Press a key to proceed.");
             Console.ReadLine();
+        }
 
-
+        private static void Section4()
+        {
             // Create task, defer starting it, and continue with another task
             Task<int> t5 = new Task<int>(n => Sum((int)n), 1000);
             t5.Start();
