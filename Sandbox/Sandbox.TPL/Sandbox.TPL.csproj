@@ -39,11 +39,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AsyncCacheExample.cs" />
     <Compile Include="BlockingCollection.cs" />
     <Compile Include="ConcurrentCollections.cs" />
+    <Compile Include="DynamicProgramming.cs" />
     <Compile Include="ParallelExample.cs" />
     <Compile Include="ParallelExample2.cs" />
     <Compile Include="ParallelExample3.cs" />
+    <Compile Include="RecursiveDecomposition.cs" />
     <Compile Include="TaskExamples.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

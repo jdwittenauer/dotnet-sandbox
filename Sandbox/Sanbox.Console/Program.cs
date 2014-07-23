@@ -8,14 +8,23 @@ namespace Sanbox.Console
     {
         static void Main(string[] args)
         {
-            Async.Run();
-            LINQ.Run();
-            TaskExamples.Run();
+            // Async
+            AsyncExamples.Run();
+
+            // LINQ
+            LINQExamples.Run();
+            MapReduceExample.Run();
+
+            // TPL
+            AsyncCacheExample.Run();
+            BlockingCollection.Run();
+            ConcurrentCollections.Run();
+            DynamicProgramming.Run();
             ParallelExample.Run();
             ParallelExample2.Run();
             ParallelExample3.Run();
-            ConcurrentCollections.Run();
-            BlockingCollection.Run();
+            RecursiveDecomposition.Run();
+            TaskExamples.Run();
         }
     }
 }

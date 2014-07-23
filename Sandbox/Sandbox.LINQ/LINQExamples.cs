@@ -7,9 +7,9 @@ using System.Threading.Tasks;
 namespace Sandbox.LINQ
 {
     /// <summary>
-    /// Learning exercies for LINQ queries on the .NET framework.
+    /// Learning exercies for LINQ queries.
     /// </summary>
-    public class LINQ
+    public class LINQExamples
     {
         public static void Run()
         {

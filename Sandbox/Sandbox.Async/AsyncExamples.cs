@@ -7,9 +7,9 @@ using System.Threading.Tasks;
 namespace Sandbox.Async
 {
     /// <summary>
-    /// Learning exercises for asyncronous programming on the .NET framework
+    /// Learning exercises for asyncronous programming.
     /// </summary>
-    public class Async
+    public class AsyncExamples
     {
         public static void Run()
         {
