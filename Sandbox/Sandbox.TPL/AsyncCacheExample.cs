@@ -16,24 +16,24 @@ namespace Sandbox.TPL
         {
             // TODO
         }
+    }
 
-        public class AsyncCache<TKey, TValue>
+    internal class AsyncCache<TKey, TValue>
+    {
+        private readonly Func<TKey, Task<TValue>> _valueFactory;
+        private readonly ConcurrentDictionary<TKey, Lazy<Task<TValue>>> _map;
+
+        public AsyncCache(Func<TKey, Task<TValue>> valueFactory)
         {
-            private readonly Func<TKey, Task<TValue>> _valueFactory;
-            private readonly ConcurrentDictionary<TKey, Lazy<Task<TValue>>> _map;
+            if (valueFactory == null) throw new ArgumentNullException("loader");
+            _valueFactory = valueFactory;
+            _map = new ConcurrentDictionary<TKey, Lazy<Task<TValue>>>();
+        }
 
-            public AsyncCache(Func<TKey, Task<TValue>> valueFactory)
-            {
-                if (valueFactory == null) throw new ArgumentNullException("loader");
-                _valueFactory = valueFactory;
-                _map = new ConcurrentDictionary<TKey, Lazy<Task<TValue>>>();
-            }
-
-            public Task<TValue> GetValue(TKey key)
-            {
-                if (key == null) throw new ArgumentNullException("key");
-                return _map.GetOrAdd(key, k => new Lazy<Task<TValue>>(() => _valueFactory(k))).Value;
-            }
+        public Task<TValue> GetValue(TKey key)
+        {
+            if (key == null) throw new ArgumentNullException("key");
+            return _map.GetOrAdd(key, k => new Lazy<Task<TValue>>(() => _valueFactory(k))).Value;
         }
     }
 }

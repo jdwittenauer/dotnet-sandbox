@@ -17,7 +17,7 @@ namespace Sandbox.TPL
         }
     }
 
-    public class Tree<T>
+    internal class Tree<T>
     {
         private static Task _completedTask = ((Func<Task>)(() =>
         {

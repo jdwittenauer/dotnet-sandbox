@@ -4,16 +4,15 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{48AA3FF6-1B2B-4EE3-93C8-0FF690F2ABD7}</ProjectGuid>
-    <OutputType>Exe</OutputType>
+    <ProjectGuid>{FF0949B7-67BC-4961-A389-4693F9F7FB0A}</ProjectGuid>
+    <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Sanbox.Console</RootNamespace>
-    <AssemblyName>Sanbox.Console</AssemblyName>
+    <RootNamespace>Sandbox.Dataflow</RootNamespace>
+    <AssemblyName>Sandbox.Dataflow</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -23,7 +22,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -34,6 +32,10 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Threading.Tasks.Dataflow, Version=4.5.20.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.Tpl.Dataflow.4.5.20\lib\portable-net45+win8+wpa81\System.Threading.Tasks.Dataflow.dll</HintPath>
+    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -41,29 +43,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Program.cs" />
+    <Compile Include="DataflowExamples.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Sandbox.Async\Sandbox.Async.csproj">
-      <Project>{02ff2ee8-39e7-4286-b9d3-12b91a0c67e2}</Project>
-      <Name>Sandbox.Async</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Sandbox.Dataflow\Sandbox.Dataflow.csproj">
-      <Project>{ff0949b7-67bc-4961-a389-4693f9f7fb0a}</Project>
-      <Name>Sandbox.Dataflow</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Sandbox.LINQ\Sandbox.LINQ.csproj">
-      <Project>{4c2d73b9-5253-4d8a-8b9b-ac6693dee75c}</Project>
-      <Name>Sandbox.LINQ</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Sandbox.TPL\Sandbox.TPL.csproj">
-      <Project>{c480515c-1f36-47c7-bc45-7c78dba49a1e}</Project>
-      <Name>Sandbox.TPL</Name>
-    </ProjectReference>
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

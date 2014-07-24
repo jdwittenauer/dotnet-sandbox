@@ -7,7 +7,8 @@ using System.Threading.Tasks;
 namespace Sandbox.TPL
 {
     /// <summary>
-    /// Exercise that performs parallel computation with partial aggregations.
+    /// Exercise that performs parallel computation with partial aggregations
+    /// using thread-local variables.
     /// </summary>
     public static class ParallelExample3
     {

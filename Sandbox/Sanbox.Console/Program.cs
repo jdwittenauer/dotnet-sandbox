@@ -1,4 +1,5 @@
 ﻿using Sandbox.Async;
+using Sandbox.Dataflow;
 using Sandbox.LINQ;
 using Sandbox.TPL;
 
@@ -25,6 +26,9 @@ namespace Sanbox.Console
             ParallelExample3.Run();
             RecursiveDecomposition.Run();
             TaskExamples.Run();
+
+            // Dataflow
+            DataflowExamples.Run();
         }
     }
 }
