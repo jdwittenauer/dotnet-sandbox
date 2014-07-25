@@ -4,12 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Sandbox.Async
+namespace Sandbox.LINQ
 {
-    /// <summary>
-    /// Learning exercises for asyncronous programming.
-    /// </summary>
-    public class AsyncExamples
+    public static class PLINQExamples
     {
         public static void Run()
         {

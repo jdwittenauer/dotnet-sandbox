@@ -9,7 +9,7 @@ namespace Sandbox.LINQ
     /// <summary>
     /// Learning exercies for LINQ queries.
     /// </summary>
-    public class LINQExamples
+    public static class LINQExamples
     {
         public static void Run()
         {

@@ -40,6 +40,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AsyncCacheExample.cs" />
+    <Compile Include="AsyncExamples.cs" />
+    <Compile Include="AsyncProducerConsumer.cs" />
     <Compile Include="BlockingCollection.cs" />
     <Compile Include="ConcurrentCollections.cs" />
     <Compile Include="DynamicProgramming.cs" />

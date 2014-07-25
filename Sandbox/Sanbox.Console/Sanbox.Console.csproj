@@ -48,10 +48,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Sandbox.Async\Sandbox.Async.csproj">
-      <Project>{02ff2ee8-39e7-4286-b9d3-12b91a0c67e2}</Project>
-      <Name>Sandbox.Async</Name>
-    </ProjectReference>
     <ProjectReference Include="..\Sandbox.Dataflow\Sandbox.Dataflow.csproj">
       <Project>{ff0949b7-67bc-4961-a389-4693f9f7fb0a}</Project>
       <Name>Sandbox.Dataflow</Name>

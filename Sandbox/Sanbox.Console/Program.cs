@@ -1,5 +1,4 @@
-﻿using Sandbox.Async;
-using Sandbox.Dataflow;
+﻿using Sandbox.Dataflow;
 using Sandbox.LINQ;
 using Sandbox.TPL;
 
@@ -9,15 +8,15 @@ namespace Sanbox.Console
     {
         static void Main(string[] args)
         {
-            // Async
-            AsyncExamples.Run();
-
             // LINQ
             LINQExamples.Run();
             MapReduceExample.Run();
+            PLINQExamples.Run();
 
             // TPL
             AsyncCacheExample.Run();
+            AsyncExamples.Run();
+            AsyncProducerConsumer.Run();
             BlockingCollection.Run();
             ConcurrentCollections.Run();
             DynamicProgramming.Run();
