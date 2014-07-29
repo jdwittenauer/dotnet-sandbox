@@ -40,6 +40,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="LINQExamples.cs" />
+    <Compile Include="LinqXMLExamples.cs" />
     <Compile Include="MapReduceExample.cs" />
     <Compile Include="PLINQExamples.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
