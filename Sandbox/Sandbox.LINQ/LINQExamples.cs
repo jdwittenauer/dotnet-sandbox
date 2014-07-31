@@ -15,14 +15,54 @@ namespace Sandbox.LINQ
     {
         public static void Run()
         {
-            // TODO
+            Console.WriteLine("LINQ query examples");
+            Console.WriteLine("------------------------------");
+            Console.WriteLine("");
+
+            Linq1();
+            Linq2();
+            Linq3();
+            Linq4();
+            Linq5();
+            Linq6();
+            Linq7();
+            Linq8();
+            Linq9();
+            Linq10();
+            Linq11();
+            Linq12();
+            Linq13();
+            Linq14();
+            Linq15();
+            Linq16();
+            Linq17();
+            Linq18();
+            Linq19();
+            Linq20();
+            Linq21();
+            Linq22();
+            Linq23();
+            Linq24();
+            Linq25();
+            Linq26();
+            Linq27();
+            Linq28();
+            Linq29();
+            Linq30();
+            Linq31();
+            Linq32();
+            Linq33();
+            Linq34();
+            Linq35();
+
+            Console.WriteLine("");
         }
 
         private static void Linq1()
         {
             int[] numbers = { 5, 4, 1, 3, 9, 8, 6, 7, 2, 0 };
 
-            // Where clause
+            // Where
             var result =
                 from num in numbers
                 where num < 5
@@ -44,7 +84,7 @@ namespace Sandbox.LINQ
         {
             List<Product> products = GetProductList();
 
-            // Where clause #2
+            // Where #2
             var result =
                 from prod in products
                 where prod.UnitsInStock > 0 && prod.UnitPrice > 3.00M
@@ -66,7 +106,7 @@ namespace Sandbox.LINQ
         {
             string[] digits = { "zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine" };
 
-            // Where clause with index
+            // Where with index
             var result = digits.Where((digit, index) => digit.Length < index);
 
             Console.WriteLine("Short digits:");
@@ -82,7 +122,7 @@ namespace Sandbox.LINQ
         {
             int[] numbers = { 5, 4, 1, 3, 9, 8, 6, 7, 2, 0 };
 
-            // Select clause
+            // Select
             var result =
                 from num in numbers
                 select num + 1;
@@ -104,7 +144,7 @@ namespace Sandbox.LINQ
             int[] numbers = { 5, 4, 1, 3, 9, 8, 6, 7, 2, 0 };
             string[] strings = { "zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine" };
 
-            // Select clause with transformation
+            // Select with transformation
             var result =
                 from num in numbers
                 select strings[num];
@@ -125,7 +165,7 @@ namespace Sandbox.LINQ
         {
             List<Product> products = GetProductList();
 
-            // Select clause with type projection
+            // Select with type projection
             var result =
                 from prod in products
                 select new { prod.ProductName, prod.Category, Price = prod.UnitPrice };
@@ -146,7 +186,7 @@ namespace Sandbox.LINQ
         {
             int[] numbers = { 5, 4, 1, 3, 9, 8, 6, 7, 2, 0 };
 
-            // Select clause with index
+            // Select with index
             var result = numbers.Select((num, index) => new { Num = num, InPlace = (num == index) });
 
             Console.WriteLine("Number: In-place?");
@@ -317,6 +357,342 @@ namespace Sandbox.LINQ
             foreach (var d in result)
             {
                 Console.WriteLine(d);
+            }
+
+            Console.ReadLine();
+        }
+
+        private static void Linq17()
+        {
+            int[] numbers = { 5, 4, 1, 3, 9, 8, 6, 7, 2, 0 };
+
+            // Group by
+            var result =
+                from num in numbers
+                group num by num % 5 into numGroup
+                select new { Remainder = numGroup.Key, Numbers = numGroup };
+
+            // Alternate syntax
+            var result2 = numbers.GroupBy(x => x % 5, y => y, (x, y) => new { Remainder = x, Numbers = y });
+
+            foreach (var grp in result)
+            {
+                Console.WriteLine("Numbers with a remainder of {0} when divided by 5:", grp.Remainder);
+                foreach (var n in grp.Numbers)
+                {
+                    Console.WriteLine(n);
+                }
+            }
+
+            Console.ReadLine();
+        }
+
+        private static void Linq18()
+        {
+            string[] words = { "blueberry", "chimpanzee", "abacus", "banana", "apple", "cheese" };
+
+            // Group by #2
+            var result =
+                from num in words
+                group num by num[0] into grp
+                select new { FirstLetter = grp.Key, Words = grp };
+
+            // Alternate syntax
+            var result2 = words.GroupBy(x => x[0], y => y).Select(g => new { FirstLetter = g.Key, Words = g });
+
+            foreach (var wordgrp in result)
+            {
+                Console.WriteLine("Words that start with the letter '{0}':", wordgrp.FirstLetter);
+                foreach (var word in wordgrp.Words)
+                {
+                    Console.WriteLine(word);
+                }
+            }
+
+            Console.ReadLine();
+        }
+
+        private static void Linq19()
+        {
+            int[] factorsOf300 = { 2, 2, 3, 5, 5 };
+
+            // Distinct
+            var result = factorsOf300.Distinct();
+
+            Console.WriteLine("Prime factors of 300:");
+            foreach (var f in result)
+            {
+                Console.WriteLine(f);
+            }
+
+            Console.ReadLine();
+        }
+
+        private static void Linq20()
+        {
+            List<Product> products = GetProductList();
+
+            // Distinct #2
+            var result = (
+                from prod in products
+                select prod.Category)
+                .Distinct();
+
+            // Alternate syntax
+            var result2 = products.Select(x => x.Category).Distinct();
+
+            Console.WriteLine("Category names:");
+            foreach (var n in result)
+            {
+                Console.WriteLine(n);
+            }
+
+            Console.ReadLine();
+        }
+
+        private static void Linq21()
+        {
+            int[] numbersA = { 0, 2, 4, 5, 6, 8, 9 };
+            int[] numbersB = { 1, 3, 5, 7, 8 };
+
+            // Union
+            var result = numbersA.Union(numbersB);
+
+            Console.WriteLine("Unique numbers from both arrays:");
+            foreach (var n in result)
+            {
+                Console.WriteLine(n);
+            }
+
+            Console.ReadLine();
+        }
+
+        private static void Linq22()
+        {
+            int[] numbersA = { 0, 2, 4, 5, 6, 8, 9 };
+            int[] numbersB = { 1, 3, 5, 7, 8 };
+
+            // Intersect
+            var result = numbersA.Intersect(numbersB);
+
+            Console.WriteLine("Common numbers shared by both arrays:");
+            foreach (var n in result)
+            {
+                Console.WriteLine(n);
+            }
+
+            Console.ReadLine();
+        }
+
+        private static void Linq23()
+        {
+            int[] numbersA = { 0, 2, 4, 5, 6, 8, 9 };
+            int[] numbersB = { 1, 3, 5, 7, 8 };
+
+            // Except
+            var result = numbersA.Except(numbersB);
+
+            Console.WriteLine("Numbers in first array but not second array:");
+            foreach (var n in result)
+            {
+                Console.WriteLine(n);
+            }
+
+            Console.ReadLine();
+        }
+
+        private static void Linq24()
+        {
+            string[] words = { "cherry", "apple", "blueberry" };
+
+            // List conversion
+            var sortedWords =
+                from w in words
+                orderby w
+                select w;
+            var wordList = sortedWords.ToList();
+
+            Console.WriteLine("The sorted word list:");
+            foreach (var w in wordList)
+            {
+                Console.WriteLine(w);
+            }
+
+            Console.ReadLine();
+        }
+
+        private static void Linq25()
+        {
+            var scoreRecords = new[] 
+            { 
+                new {Name = "Alice", Score = 50},
+                new {Name = "Bob"  , Score = 40},
+                new {Name = "Cathy", Score = 45}
+            };
+
+            // Dictionary conversion
+            var scoreRecordsDict = scoreRecords.ToDictionary(sr => sr.Name);
+
+            Console.WriteLine("Bob's score: {0}", scoreRecordsDict["Bob"]);
+
+            Console.ReadLine();
+        }
+
+        private static void Linq26()
+        {
+            string[] strings = { "zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine" };
+
+            // First
+            string result = strings.First(s => s[0] == 'o');
+
+            Console.WriteLine("A string starting with 'o': {0}", result);
+
+            Console.ReadLine();
+        }
+
+        private static void Linq27()
+        {
+            // Range
+            var numbers =
+                from n in Enumerable.Range(100, 50)
+                select new { Number = n, OddEven = n % 2 == 1 ? "odd" : "even" };
+
+            // Alternate syntax
+            var numbers2 = Enumerable.Range(100, 50).Select(x =>
+                new { Number = x, OddEven = x % 2 == 1 ? "odd" : "even" });
+
+            foreach (var n in numbers)
+            {
+                Console.WriteLine("The number {0} is {1}.", n.Number, n.OddEven);
+            }
+
+            Console.ReadLine();
+        }
+
+        private static void Linq28()
+        {
+            string[] words = { "believe", "relief", "receipt", "field" };
+
+            // Any
+            var result = words.Any(w => w.Contains("ei"));
+
+            Console.WriteLine("There is a word in the list that contains 'ei': {0}", result);
+
+            Console.ReadLine();
+        }
+
+        private static void Linq29()
+        {
+            int[] numbers = { 1, 11, 3, 19, 41, 65, 19 };
+
+            // All
+            var result = numbers.All(n => n % 2 == 1);
+
+            Console.WriteLine("The list contains only odd numbers: {0}", result);
+
+            Console.ReadLine();
+        }
+
+        private static void Linq30()
+        {
+            int[] numbers = { 5, 4, 1, 3, 9, 8, 6, 7, 2, 0 };
+
+            // Count
+            var result = numbers.Count(n => n % 2 == 1);
+
+            Console.WriteLine("There are {0} odd numbers in the list.", result);
+
+            Console.ReadLine();
+        }
+
+        private static void Linq31()
+        {
+            string[] words = { "cherry", "apple", "blueberry" };
+
+            // Sum
+            var sum = words.Sum(w => w.Length);
+            Console.WriteLine("There are a total of {0} characters in these words.", sum);
+
+            // Min
+            var min = words.Min(x => x.Length);
+            Console.WriteLine("The shortest word has {0} characters.", min);
+
+            // Max
+            var max = words.Max(x => x.Length);
+            Console.WriteLine("The longest word has {0} characters.", max);
+
+            // Average
+            var avg = words.Average(x => x.Length);
+            Console.WriteLine("The average length of the words is {0}.", avg);
+
+            Console.ReadLine();
+        }
+
+        private static void Linq32()
+        {
+            double[] doubles = { 1.7, 2.3, 1.9, 4.1, 2.9 };
+
+            // Aggregate
+            var result = doubles.Aggregate((runningProduct, nextFactor) => runningProduct * nextFactor);
+
+            Console.WriteLine("Total product of all numbers: {0}", result);
+
+            Console.ReadLine();
+        }
+
+        private static void Linq33()
+        {
+            double startBalance = 100.0;
+            int[] attemptedWithdrawals = { 20, 10, 40, 50, 10, 70, 30 };
+
+            // Aggregate #2
+            var result =
+                attemptedWithdrawals.Aggregate(startBalance,
+                    (balance, nextWithdrawal) =>
+                        ((nextWithdrawal <= balance) ? (balance - nextWithdrawal) : balance));
+
+            Console.WriteLine("Ending balance: {0}", result);
+
+            Console.ReadLine();
+        }
+
+        private static void Linq34()
+        {
+            int[] numbersA = { 0, 2, 4, 5, 6, 8, 9 };
+            int[] numbersB = { 1, 3, 5, 7, 8 };
+
+            // Concat
+            var result = numbersA.Concat(numbersB);
+
+            Console.WriteLine("All numbers from both arrays:");
+            foreach (var n in result)
+            {
+                Console.WriteLine(n);
+            }
+
+            Console.ReadLine();
+        }
+
+        private static void Linq35()
+        {
+            string[] categories = new string[]{ 
+                "Beverages", 
+                "Condiments", 
+                "Vegetables", 
+                "Dairy Products", 
+                "Seafood" };
+            List<Product> products = GetProductList();
+
+            // Join
+            var result =
+                from cat in categories
+                join prod in products on cat equals prod.Category into ps
+                from p in ps
+                select new { Category = cat, p.ProductName };
+
+            foreach (var item in result)
+            {
+                Console.WriteLine(item.ProductName + ": " + item.Category);
             }
 
             Console.ReadLine();
