@@ -9,25 +9,26 @@ namespace Sanbox.Console
         static void Main(string[] args)
         {
             // LINQ
-            LINQExamples.Run();
-            MapReduceExample.Run();
-            PLINQExamples.Run();
+            //LINQExamples.Run();
+            //LinqXMLExamples.Run();
+            //PLINQExamples.Run();
+            //MapReduceExample.Run();
 
-            // TPL
-            AsyncCacheExample.Run();
-            AsyncExamples.Run();
-            AsyncProducerConsumer.Run();
-            BlockingCollection.Run();
-            ConcurrentCollections.Run();
-            DynamicProgramming.Run();
-            ParallelExample.Run();
-            ParallelExample2.Run();
-            ParallelExample3.Run();
-            RecursiveDecomposition.Run();
-            TaskExamples.Run();
+            //// TPL
+            //AsyncExamples.Run();
+            //AsyncCacheExample.Run(); // TODO
+            //AsyncProducerConsumer.Run(); // TODO
+            //TaskExamples.Run();
+            //ParallelExample.Run();
+            //ParallelExample2.Run();
+            //ParallelExample3.Run(); // TODO
+            //ConcurrentCollections.Run();
+            //BlockingCollection.Run();
+            //DynamicProgramming.Run(); // TODO
+            //RecursiveDecomposition.Run(); // TODO
 
-            // Dataflow
-            DataflowExamples.Run();
+            //// Dataflow
+            //DataflowExamples.Run(); // TODO
         }
     }
 }

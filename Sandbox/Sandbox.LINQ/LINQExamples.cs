@@ -9,13 +9,13 @@ using System.Xml.Linq;
 namespace Sandbox.LINQ
 {
     /// <summary>
-    /// Learning exercies for LINQ queries.
+    /// Learning exercie for LINQ queries.
     /// </summary>
     public static class LINQExamples
     {
         public static void Run()
         {
-            Console.WriteLine("LINQ query examples");
+            Console.WriteLine("LINQ examples");
             Console.WriteLine("------------------------------");
             Console.WriteLine("");
 
@@ -54,7 +54,10 @@ namespace Sandbox.LINQ
             Linq33();
             Linq34();
             Linq35();
+            Linq36();
 
+            Console.WriteLine("Example complete. Press a key to proceed.");
+            Console.ReadKey();
             Console.WriteLine("");
         }
 
@@ -694,6 +697,39 @@ namespace Sandbox.LINQ
             {
                 Console.WriteLine(item.ProductName + ": " + item.Category);
             }
+
+            Console.ReadLine();
+        }
+
+        private static void Linq36()
+        {
+            int[] numbers = { 1, 2, 3, 4 };
+            string[] words = { "one", "two", "three" };
+
+            // Zip #1
+            var result = numbers.Zip(words, (first, second) => first + " " + second);
+
+            Console.WriteLine("Combine two lists together:");
+            foreach (var item in result)
+                Console.WriteLine(item);
+            Console.WriteLine();
+
+            // Zip #2
+            int[] numbers2 = { 5, 2, 1, 3, 6 };
+            var result2 = numbers2.Zip(numbers, (first, second) => first > second ? first : second);
+
+            Console.WriteLine("Select the highest number at each position:");
+            foreach (var item in result2)
+                Console.WriteLine(item);
+            Console.WriteLine();
+
+            // Zip #3
+            double[] quarterlySales = { 4023.52, 7701.65, 2435.20 };
+            double[] quarterlyRate = { 0.25, 0.2, 0.3, 0.2 };
+            var result3 = quarterlySales.Zip(quarterlyRate, (first, second) => first * second).Sum();
+
+            Console.WriteLine("Calculate total sales:");
+            Console.WriteLine(result3);
 
             Console.ReadLine();
         }

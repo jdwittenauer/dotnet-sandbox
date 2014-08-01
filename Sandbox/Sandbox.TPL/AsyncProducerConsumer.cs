@@ -6,11 +6,22 @@ using System.Threading.Tasks;
 
 namespace Sandbox.TPL
 {
+    /// <summary>
+    /// Example of the producer/consumer pattern using async tasks.
+    /// </summary>
     public static class AsyncProducerConsumer
     {
         public static void Run()
         {
+            Console.WriteLine("Async producer/consumer example");
+            Console.WriteLine("------------------------------");
+            Console.WriteLine("");
+
             // TODO
+
+            Console.WriteLine("Example complete.  Press a key to proceed.");
+            Console.ReadKey();
+            Console.WriteLine("");
         }
     }
 

@@ -14,18 +14,31 @@ namespace Sandbox.LINQ
     {
         public static void Run()
         {
-            Console.WriteLine("MapReduce example using LINQ");
+            Console.WriteLine("MapReduce example");
             Console.WriteLine("------------------------------");
             Console.WriteLine("");
 
-            var files = Directory.EnumerateFiles("*.txt").AsParallel();
-            var counts = files.MapReduce(
-                path => File.ReadLines(path).SelectMany(line => line.Split(delimiters)),
+            var lines = new List<string>();
+            lines.Add("This is a simple test for the map reduce program.");
+            lines.Add("We will use some generic text for it to parse and get a list of word counts.");
+
+            var counts = lines.MapReduce(
+                line => line.Split(delimiters),
                 word => word,
                 group => new[] { new KeyValuePair<string, int>(group.Key, group.Count()) });
 
-            Console.WriteLine("MapReduce complete.");
+            foreach (var count in counts)
+            {
+                if (count.Key.Length < 2)
+                    Console.WriteLine("Word: {0}\t\t Count: {1}", count.Key, count.Value);
+                else
+                    Console.WriteLine("Word: {0}\t Count: {1}", count.Key, count.Value);
+            }
 
+            Console.WriteLine("");
+
+            Console.WriteLine("Example complete. Press a key to proceed.");
+            Console.ReadKey();
             Console.WriteLine("");
         }
 

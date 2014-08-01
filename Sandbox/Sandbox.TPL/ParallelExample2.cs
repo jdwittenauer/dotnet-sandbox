@@ -58,9 +58,10 @@ namespace Sandbox.TPL
             stopwatch.Stop();
             Console.WriteLine("Parallel loop time in milliseconds: {0}", stopwatch.ElapsedMilliseconds);
 
+            Console.WriteLine("");
+
             Console.WriteLine("Example complete.  Press a key to proceed.");
             Console.ReadKey();
-
             Console.WriteLine("");
         }
     }

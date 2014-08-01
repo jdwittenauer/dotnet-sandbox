@@ -28,6 +28,8 @@ namespace Sandbox.TPL
             Section5();
             Section6();
 
+            Console.WriteLine("Example complete. Press a key to proceed.");
+            Console.ReadKey();
             Console.WriteLine("");
         }
 
@@ -180,11 +182,14 @@ namespace Sandbox.TPL
         private static void Section6()
         {
             // Parallel invoke
-            Task t = Task.Factory.StartNew(() => PrintMessage(1));
-            Task t2 = Task.Factory.StartNew(() => PrintMessage(2));
-            Task t3 = Task.Factory.StartNew(() => PrintMessage(3));
+            Task t = new Task(() => PrintMessage(1));
+            Task t2 = new Task(() => PrintMessage(2));
+            Task t3 = new Task(() => PrintMessage(3));
 
             Parallel.Invoke(t.Start, t2.Start, t3.Start);
+            t.Wait();
+            t2.Wait();
+            t3.Wait();
 
             Console.WriteLine("Section 6 complete.  Press a key to proceed.");
             Console.ReadLine();

@@ -13,7 +13,15 @@ namespace Sandbox.TPL
     {
         public static void Run()
         {
+            Console.WriteLine("Recursive decomposition example");
+            Console.WriteLine("------------------------------");
+            Console.WriteLine("");
+
             // TODO
+
+            Console.WriteLine("Example complete.  Press a key to proceed.");
+            Console.ReadKey();
+            Console.WriteLine("");
         }
     }
 

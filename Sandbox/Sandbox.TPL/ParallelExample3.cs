@@ -21,6 +21,10 @@ namespace Sandbox.TPL
             const int steps = 100000000;
 
             // TODO
+
+            Console.WriteLine("Example complete.  Press a key to proceed.");
+            Console.ReadKey();
+            Console.WriteLine("");
         }
 
         private static double SerialPi(int steps)

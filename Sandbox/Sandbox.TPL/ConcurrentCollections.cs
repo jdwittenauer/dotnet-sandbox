@@ -27,6 +27,8 @@ namespace Sandbox.TPL
             ConcurrentStackExample();
             ConcurrentBagExample();
 
+            Console.WriteLine("Example complete.  Press a key to proceed.");
+            Console.ReadKey();
             Console.WriteLine("");
         }
 
@@ -47,8 +49,8 @@ namespace Sandbox.TPL
 
             Console.WriteLine("The square of 23 is {0} (should be {1})", cd[23], 23 * 23);
 
-            Console.WriteLine("Example complete.  Press a key to proceed.");
-            Console.ReadKey();
+            Console.WriteLine("Concurrent dictionary complete.  Press a key to proceed.");
+            Console.ReadLine();
         }
 
         private static void ConcurrentQueueExample()
@@ -85,8 +87,8 @@ namespace Sandbox.TPL
 
             Console.WriteLine("outerSum = {0}, should be 49995000", outerSum);
 
-            Console.WriteLine("Example complete.  Press a key to proceed.");
-            Console.ReadKey();
+            Console.WriteLine("Concurrent queue complete.  Press a key to proceed.");
+            Console.ReadLine();
         }
 
         private static void ConcurrentStackExample()
@@ -130,8 +132,8 @@ namespace Sandbox.TPL
 
             if (errorCount == 0) Console.WriteLine("OK!");
 
-            Console.WriteLine("Example complete.  Press a key to proceed.");
-            Console.ReadKey();
+            Console.WriteLine("Concurrent stack complete.  Press a key to proceed.");
+            Console.ReadLine();
         }
 
         private static void ConcurrentBagExample()
@@ -156,8 +158,8 @@ namespace Sandbox.TPL
             if (cb.TryPeek(out item))
                 Console.WriteLine("TryPeek succeeded for empty bag!");
 
-            Console.WriteLine("Example complete.  Press a key to proceed.");
-            Console.ReadKey();
+            Console.WriteLine("Concurrent bag complete.  Press a key to proceed.");
+            Console.ReadLine();
         }
     }
 }

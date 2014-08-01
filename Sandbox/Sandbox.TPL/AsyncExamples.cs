@@ -12,33 +12,29 @@ namespace Sandbox.TPL
     /// </summary>
     public static class AsyncExamples
     {
-        public static async void Run()
+        public static void Run()
         {
-            // TODO - NOT WORKING CORRECTLY
-
             Console.WriteLine("Async programming examples");
             Console.WriteLine("------------------------------");
             Console.WriteLine("");
 
             // Calling an async method with no return type 
             var task = PrintAsync();
-            await task;
-
-            // Don't have to create the task first
-            await PrintAsync();
+            task.Wait();
 
             // Async method that returns a value
-            int result = await ReturnIntAsync();
-            Console.WriteLine("Method returned the value {0}", result);
+            var result = ReturnIntAsync();
+            result.Wait();
+            Console.WriteLine("Method returned the value {0}", result.Result);
 
             // Async method with a progress indicator
             var progress = new Progress<int>(p => Console.WriteLine("Task progress: {0}", p));
-            var listResult = await ReturnListAsync(progress);
+            var listResult = ReturnListAsync(progress);
+            listResult.Wait();
             Console.WriteLine("Task complete!");
 
             Console.WriteLine("Example complete.  Press a key to proceed.");
             Console.ReadKey();
-
             Console.WriteLine("");
         }
 
