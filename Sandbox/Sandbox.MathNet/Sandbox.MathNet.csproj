@@ -4,16 +4,15 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{48AA3FF6-1B2B-4EE3-93C8-0FF690F2ABD7}</ProjectGuid>
-    <OutputType>Exe</OutputType>
+    <ProjectGuid>{72525A86-13E2-4B8B-A301-94F960A478E0}</ProjectGuid>
+    <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Sanbox.Console</RootNamespace>
-    <AssemblyName>Sanbox.Console</AssemblyName>
+    <RootNamespace>Sandbox.MathNet</RootNamespace>
+    <AssemblyName>Sandbox.MathNet</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -23,7 +22,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -32,8 +30,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="MathNet.Numerics">
+      <HintPath>..\packages\MathNet.Numerics.3.1.0\lib\net40\MathNet.Numerics.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Numerics" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -41,25 +43,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Program.cs" />
+    <Compile Include="MathNetExamples.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Sandbox.Dataflow\Sandbox.Dataflow.csproj">
-      <Project>{ff0949b7-67bc-4961-a389-4693f9f7fb0a}</Project>
-      <Name>Sandbox.Dataflow</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Sandbox.LINQ\Sandbox.LINQ.csproj">
-      <Project>{4c2d73b9-5253-4d8a-8b9b-ac6693dee75c}</Project>
-      <Name>Sandbox.LINQ</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Sandbox.TPL\Sandbox.TPL.csproj">
-      <Project>{c480515c-1f36-47c7-bc45-7c78dba49a1e}</Project>
-      <Name>Sandbox.TPL</Name>
-    </ProjectReference>
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

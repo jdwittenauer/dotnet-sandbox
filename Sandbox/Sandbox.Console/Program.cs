@@ -1,8 +1,10 @@
 ﻿using Sandbox.Dataflow;
 using Sandbox.LINQ;
+using Sandbox.MathNet;
+using Sandbox.QuickGraph;
 using Sandbox.TPL;
 
-namespace Sanbox.Console
+namespace Sandbox.Console
 {
     class Program
     {
@@ -29,6 +31,12 @@ namespace Sanbox.Console
 
             //// Dataflow
             //DataflowExamples.Run(); // TODO
+
+            //// Math .NET
+            //MathNetExamples.Run(); // TODO
+
+            //// QuickGraph
+            //QuickGraphExamples.Run(); // TODO
         }
     }
 }
