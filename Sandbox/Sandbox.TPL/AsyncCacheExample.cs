@@ -20,11 +20,24 @@ namespace Sandbox.TPL
             Console.WriteLine("------------------------------");
             Console.WriteLine("");
 
-            // TODO
+            var cache = new AsyncCache<string, int>(IntegerFactory);
+
+            Console.WriteLine("Attempting a get/add from the cache...");
+            var task = cache.GetValue("42");
+            task.Start();
+            task.Wait();
+            Console.WriteLine("Value = {0}", task.Result);
+
+            Console.WriteLine("");
 
             Console.WriteLine("Example complete.  Press a key to proceed.");
             Console.ReadKey();
             Console.WriteLine("");
+        }
+
+        private static Task<int> IntegerFactory(string s)
+        {
+            return new Task<int>(() => int.Parse(s));
         }
     }
 

@@ -18,16 +18,16 @@ namespace Sandbox.Console
 
             //// TPL
             //AsyncExamples.Run();
-            //AsyncCacheExample.Run(); // TODO
-            //AsyncProducerConsumer.Run(); // TODO
+            //AsyncCacheExample.Run();
+            //AsyncProducerConsumer.Run();
             //TaskExamples.Run();
             //ParallelExample.Run();
             //ParallelExample2.Run();
-            //ParallelExample3.Run(); // TODO
+            //ParallelExample3.Run();
             //ConcurrentCollections.Run();
             //BlockingCollection.Run();
-            //DynamicProgramming.Run(); // TODO
-            //RecursiveDecomposition.Run(); // TODO
+            //DynamicProgramming.Run();
+            //RecursiveDecomposition.Run();
 
             //// Dataflow
             //DataflowExamples.Run(); // TODO

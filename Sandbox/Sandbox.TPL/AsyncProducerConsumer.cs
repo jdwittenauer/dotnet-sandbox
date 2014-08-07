@@ -20,7 +20,36 @@ namespace Sandbox.TPL
             Console.WriteLine("------------------------------");
             Console.WriteLine("");
 
-            // TODO
+            var buffer = new AsyncProducerConsumerCollection<int>();
+
+            var producer = new Task(() =>
+            {
+                for (int i = 0; i < 10; i++)
+                {
+                    buffer.Add(i);
+                    Console.WriteLine("Producer: {0} added.", i);
+                    Thread.Sleep(1000);
+                }
+            });
+
+            var consumer = new Task(() =>
+            {
+                // Give the producer time to queue a few items
+                Thread.Sleep(4000);
+
+                for (int i = 0; i < 10; i++)
+                {
+                    var item = buffer.Take();
+                    Console.WriteLine("Consumer: {0} removed.", item.Result);
+                    Thread.Sleep(500);
+                }
+            });
+
+            Parallel.Invoke(producer.Start, consumer.Start);
+            producer.Wait();
+            consumer.Wait();
+
+            Console.WriteLine("");
 
             Console.WriteLine("Example complete.  Press a key to proceed.");
             Console.ReadKey();

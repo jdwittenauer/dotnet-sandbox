@@ -22,8 +22,33 @@ namespace Sandbox.TPL
             Console.WriteLine("");
 
             const int steps = 100000000;
+            double value = 0;
+            Stopwatch stopwatch = new Stopwatch();
 
-            // TODO
+            // Sequential version
+            Console.WriteLine("Executing sequential loop...");
+            stopwatch.Start();
+            value = SerialPi(steps);
+            stopwatch.Stop();
+            Console.WriteLine("Sequential loop time in milliseconds: {0}", stopwatch.ElapsedMilliseconds);
+
+            // Naive parallel version
+            Console.WriteLine("Executing naive parallel loop...");
+            stopwatch.Reset();
+            stopwatch.Start();
+            value = NaiveParallelPi(steps);
+            stopwatch.Stop();
+            Console.WriteLine("Naive parallel loop time in milliseconds: {0}", stopwatch.ElapsedMilliseconds);
+
+            // Parallel version
+            Console.WriteLine("Executing parallel loop...");
+            stopwatch.Reset();
+            stopwatch.Start();
+            value = ParallelPi(steps);
+            stopwatch.Stop();
+            Console.WriteLine("Parallel loop time in milliseconds: {0}", stopwatch.ElapsedMilliseconds);
+
+            Console.WriteLine("");
 
             Console.WriteLine("Example complete.  Press a key to proceed.");
             Console.ReadKey();

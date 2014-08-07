@@ -21,7 +21,14 @@ namespace Sandbox.TPL
             Console.WriteLine("------------------------------");
             Console.WriteLine("");
 
-            // TODO
+            Console.WriteLine("Edit distance between strings:");
+            Console.WriteLine("Apple/Orange - {0}", ParallelEditDistance("Apple", "Orange"));
+            Console.WriteLine("Apple/Apricot - {0}", ParallelEditDistance("Apple", "Apricot"));
+            Console.WriteLine("Bananna/Blueberry - {0}", ParallelEditDistance("Bananna", "Blueberry"));
+            Console.WriteLine("Orange/Strawberry - {0}", ParallelEditDistance("Orange", "Strawberry"));
+            Console.WriteLine("Blueberry/Strawberry - {0}", ParallelEditDistance("Blueberry", "Strawberry"));
+
+            Console.WriteLine("");
 
             Console.WriteLine("Example complete.  Press a key to proceed.");
             Console.ReadKey();
