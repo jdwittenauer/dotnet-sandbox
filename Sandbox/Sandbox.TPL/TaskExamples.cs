@@ -76,7 +76,7 @@ namespace Sandbox.TPL
             catch (AggregateException e)
             {
                 e.Handle(x => x is OperationCanceledException);
-                Console.WriteLine("Sum was canceled");
+                Console.WriteLine("Sum was canceled.");
             }
 
             Console.WriteLine("Section 3 complete.  Press a key to proceed.");

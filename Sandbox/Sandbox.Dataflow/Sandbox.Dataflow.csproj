@@ -43,7 +43,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DataflowExamples.cs" />
+    <Compile Include="BlockTypeExamples.cs" />
+    <Compile Include="ParallelismExample.cs" />
+    <Compile Include="PipelineExample.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

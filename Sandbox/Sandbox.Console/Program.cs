@@ -30,7 +30,9 @@ namespace Sandbox.Console
             //RecursiveDecomposition.Run();
 
             //// Dataflow
-            //DataflowExamples.Run(); // TODO
+            //BlockTypeExamples.Run();
+            //ParallelismExample.Run();
+            //PipelineExample.Run();
 
             //// Math .NET
             //MathNetExamples.Run(); // TODO
