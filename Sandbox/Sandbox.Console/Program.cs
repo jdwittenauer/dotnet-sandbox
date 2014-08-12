@@ -11,34 +11,34 @@ namespace Sandbox.Console
         static void Main(string[] args)
         {
             // LINQ
-            //LINQExamples.Run();
-            //LinqXMLExamples.Run();
-            //PLINQExamples.Run();
-            //MapReduceExample.Run();
+            LINQExamples.Run();
+            LinqXMLExamples.Run();
+            PLINQExamples.Run();
+            MapReduceExample.Run();
 
-            //// TPL
-            //AsyncExamples.Run();
-            //AsyncCacheExample.Run();
-            //AsyncProducerConsumer.Run();
-            //TaskExamples.Run();
-            //ParallelExample.Run();
-            //ParallelExample2.Run();
-            //ParallelExample3.Run();
-            //ConcurrentCollections.Run();
-            //BlockingCollection.Run();
-            //DynamicProgramming.Run();
-            //RecursiveDecomposition.Run();
+            // TPL
+            AsyncExamples.Run();
+            AsyncCacheExample.Run();
+            AsyncProducerConsumer.Run();
+            TaskExamples.Run();
+            ParallelExample.Run();
+            ParallelExample2.Run();
+            ParallelExample3.Run();
+            ConcurrentCollections.Run();
+            BlockingCollection.Run();
+            DynamicProgramming.Run();
+            RecursiveDecomposition.Run();
 
-            //// Dataflow
-            //BlockTypeExamples.Run();
-            //ParallelismExample.Run();
-            //PipelineExample.Run();
+            // Dataflow
+            BlockTypeExamples.Run();
+            ParallelismExample.Run();
+            PipelineExample.Run();
 
-            //// Math .NET
-            //MathNetExamples.Run(); // TODO
+            // Math .NET
+            MathNetExamples.Run();
 
-            //// QuickGraph
-            //QuickGraphExamples.Run(); // TODO
+            // QuickGraph
+            QuickGraphExamples.Run();
         }
     }
 }
