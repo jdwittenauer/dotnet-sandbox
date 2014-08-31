@@ -1,7 +1,6 @@
 ﻿using Sandbox.Dataflow;
 using Sandbox.LINQ;
 using Sandbox.MathNet;
-using Sandbox.QuickGraph;
 using Sandbox.TPL;
 
 namespace Sandbox.Console
@@ -36,9 +35,6 @@ namespace Sandbox.Console
 
             // Math .NET
             MathNetExamples.Run();
-
-            // QuickGraph
-            QuickGraphExamples.Run();
         }
     }
 }

@@ -60,10 +60,6 @@
       <Project>{72525a86-13e2-4b8b-a301-94f960a478e0}</Project>
       <Name>Sandbox.MathNet</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Sandbox.QuickGraph\Sandbox.QuickGraph.csproj">
-      <Project>{db7d08bc-1283-4d1b-86a1-60fcd6e5087f}</Project>
-      <Name>Sandbox.QuickGraph</Name>
-    </ProjectReference>
     <ProjectReference Include="..\Sandbox.TPL\Sandbox.TPL.csproj">
       <Project>{c480515c-1f36-47c7-bc45-7c78dba49a1e}</Project>
       <Name>Sandbox.TPL</Name>
