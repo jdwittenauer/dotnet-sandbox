@@ -4,16 +4,15 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{48AA3FF6-1B2B-4EE3-93C8-0FF690F2ABD7}</ProjectGuid>
-    <OutputType>Exe</OutputType>
+    <ProjectGuid>{15BA5198-9343-4186-A65D-52CB1607A7BE}</ProjectGuid>
+    <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Sandbox.Console</RootNamespace>
-    <AssemblyName>Sandbox.Console</AssemblyName>
+    <RootNamespace>Sandbox.Reactive</RootNamespace>
+    <AssemblyName>Sandbox.Reactive</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -23,7 +22,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -34,6 +32,18 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Reactive.Core">
+      <HintPath>..\packages\Rx-Core.2.2.5\lib\net45\System.Reactive.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Reactive.Interfaces">
+      <HintPath>..\packages\Rx-Interfaces.2.2.5\lib\net45\System.Reactive.Interfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Reactive.Linq">
+      <HintPath>..\packages\Rx-Linq.2.2.5\lib\net45\System.Reactive.Linq.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Reactive.PlatformServices">
+      <HintPath>..\packages\Rx-PlatformServices.2.2.5\lib\net45\System.Reactive.PlatformServices.dll</HintPath>
+    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -41,37 +51,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Program.cs" />
+    <Compile Include="RxExamples.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Sandbox.Dataflow\Sandbox.Dataflow.csproj">
-      <Project>{ff0949b7-67bc-4961-a389-4693f9f7fb0a}</Project>
-      <Name>Sandbox.Dataflow</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Sandbox.LINQ\Sandbox.LINQ.csproj">
-      <Project>{4c2d73b9-5253-4d8a-8b9b-ac6693dee75c}</Project>
-      <Name>Sandbox.LINQ</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Sandbox.Lucene\Sandbox.Lucene.csproj">
-      <Project>{906bd902-05ae-4088-96ec-4fb5e9d59b23}</Project>
-      <Name>Sandbox.Lucene</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Sandbox.MathNet\Sandbox.MathNet.csproj">
-      <Project>{72525a86-13e2-4b8b-a301-94f960a478e0}</Project>
-      <Name>Sandbox.MathNet</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Sandbox.Reactive\Sandbox.Reactive.csproj">
-      <Project>{15ba5198-9343-4186-a65d-52cb1607a7be}</Project>
-      <Name>Sandbox.Reactive</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Sandbox.TPL\Sandbox.TPL.csproj">
-      <Project>{c480515c-1f36-47c7-bc45-7c78dba49a1e}</Project>
-      <Name>Sandbox.TPL</Name>
-    </ProjectReference>
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

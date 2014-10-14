@@ -1,6 +1,8 @@
 ﻿using Sandbox.Dataflow;
 using Sandbox.LINQ;
+using Sandbox.Lucene;
 using Sandbox.MathNet;
+using Sandbox.Reactive;
 using Sandbox.TPL;
 
 namespace Sandbox.Console
@@ -33,8 +35,14 @@ namespace Sandbox.Console
             ParallelismExample.Run();
             PipelineExample.Run();
 
+            // Reactive Extenstions
+            RxExamples.Run();
+
             // Math .NET
             MathNetExamples.Run();
+
+            // Lucene .NET
+            LuceneExample.Run();
         }
     }
 }

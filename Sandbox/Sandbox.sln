@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
-VisualStudioVersion = 12.0.30723.0
+VisualStudioVersion = 12.0.30501.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Readme", "Readme", "{8ABE5DB2-C743-478F-ACA9-1DC419E89A9D}"
 	ProjectSection(SolutionItems) = preProject
@@ -17,6 +17,10 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sandbox.Dataflow", "Sandbox.Dataflow\Sandbox.Dataflow.csproj", "{FF0949B7-67BC-4961-A389-4693F9F7FB0A}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sandbox.MathNet", "Sandbox.MathNet\Sandbox.MathNet.csproj", "{72525A86-13E2-4B8B-A301-94F960A478E0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sandbox.Reactive", "Sandbox.Reactive\Sandbox.Reactive.csproj", "{15BA5198-9343-4186-A65D-52CB1607A7BE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sandbox.Lucene", "Sandbox.Lucene\Sandbox.Lucene.csproj", "{906BD902-05AE-4088-96EC-4FB5E9D59B23}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -44,6 +48,14 @@ Global
 		{72525A86-13E2-4B8B-A301-94F960A478E0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{72525A86-13E2-4B8B-A301-94F960A478E0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{72525A86-13E2-4B8B-A301-94F960A478E0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{15BA5198-9343-4186-A65D-52CB1607A7BE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{15BA5198-9343-4186-A65D-52CB1607A7BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{15BA5198-9343-4186-A65D-52CB1607A7BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{15BA5198-9343-4186-A65D-52CB1607A7BE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{906BD902-05AE-4088-96EC-4FB5E9D59B23}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{906BD902-05AE-4088-96EC-4FB5E9D59B23}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{906BD902-05AE-4088-96EC-4FB5E9D59B23}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{906BD902-05AE-4088-96EC-4FB5E9D59B23}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
