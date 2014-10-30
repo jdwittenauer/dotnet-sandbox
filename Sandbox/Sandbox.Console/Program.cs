@@ -1,6 +1,5 @@
 ﻿using Sandbox.Dataflow;
 using Sandbox.LINQ;
-using Sandbox.Lucene;
 using Sandbox.MathNet;
 using Sandbox.Reactive;
 using Sandbox.TPL;
@@ -40,9 +39,6 @@ namespace Sandbox.Console
 
             // Math .NET
             MathNetExamples.Run();
-
-            // Lucene .NET
-            LuceneExample.Run();
         }
     }
 }

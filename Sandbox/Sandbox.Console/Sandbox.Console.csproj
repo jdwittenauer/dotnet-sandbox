@@ -56,10 +56,6 @@
       <Project>{4c2d73b9-5253-4d8a-8b9b-ac6693dee75c}</Project>
       <Name>Sandbox.LINQ</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Sandbox.Lucene\Sandbox.Lucene.csproj">
-      <Project>{906bd902-05ae-4088-96ec-4fb5e9d59b23}</Project>
-      <Name>Sandbox.Lucene</Name>
-    </ProjectReference>
     <ProjectReference Include="..\Sandbox.MathNet\Sandbox.MathNet.csproj">
       <Project>{72525a86-13e2-4b8b-a301-94f960a478e0}</Project>
       <Name>Sandbox.MathNet</Name>
