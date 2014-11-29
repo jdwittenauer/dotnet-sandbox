@@ -1,4 +1,4 @@
-csharp-sandbox
+dotnet-sandbox
 ==============
 
-Catch-all for miscellaneous C#-based projects.
+Catch-all for miscellaneous .NET-based code.
