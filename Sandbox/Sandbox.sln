@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
-VisualStudioVersion = 12.0.30501.0
+VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Readme", "Readme", "{8ABE5DB2-C743-478F-ACA9-1DC419E89A9D}"
 	ProjectSection(SolutionItems) = preProject
@@ -19,6 +19,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sandbox.MathNet", "Sandbox.MathNet\Sandbox.MathNet.csproj", "{72525A86-13E2-4B8B-A301-94F960A478E0}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sandbox.Reactive", "Sandbox.Reactive\Sandbox.Reactive.csproj", "{15BA5198-9343-4186-A65D-52CB1607A7BE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sandbox.WaterJugsProblem", "Sandbox.WaterJugsProblem\Sandbox.WaterJugsProblem.csproj", "{B75D5B01-42B3-47CF-AE2E-48D1F5381DED}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -50,6 +52,10 @@ Global
 		{15BA5198-9343-4186-A65D-52CB1607A7BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{15BA5198-9343-4186-A65D-52CB1607A7BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{15BA5198-9343-4186-A65D-52CB1607A7BE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B75D5B01-42B3-47CF-AE2E-48D1F5381DED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B75D5B01-42B3-47CF-AE2E-48D1F5381DED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B75D5B01-42B3-47CF-AE2E-48D1F5381DED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B75D5B01-42B3-47CF-AE2E-48D1F5381DED}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

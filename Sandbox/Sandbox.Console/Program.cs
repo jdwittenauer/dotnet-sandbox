@@ -3,6 +3,7 @@ using Sandbox.LINQ;
 using Sandbox.MathNet;
 using Sandbox.Reactive;
 using Sandbox.TPL;
+using Sandbox.WaterJugsProblem;
 
 namespace Sandbox.Console
 {
@@ -39,6 +40,9 @@ namespace Sandbox.Console
 
             // Math .NET
             MathNetExamples.Run();
+
+            // Water Jubs Problem
+            Launcher.Run();
         }
     }
 }
