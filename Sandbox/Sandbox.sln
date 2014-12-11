@@ -22,6 +22,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sandbox.Reactive", "Sandbox
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sandbox.WaterJugsProblem", "Sandbox.WaterJugsProblem\Sandbox.WaterJugsProblem.csproj", "{B75D5B01-42B3-47CF-AE2E-48D1F5381DED}"
 EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "Sandbox.FSharp", "Sandbox.FSharp\Sandbox.FSharp.fsproj", "{CE82032C-3E69-4987-B832-4C24439F092D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -56,6 +58,10 @@ Global
 		{B75D5B01-42B3-47CF-AE2E-48D1F5381DED}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B75D5B01-42B3-47CF-AE2E-48D1F5381DED}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B75D5B01-42B3-47CF-AE2E-48D1F5381DED}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CE82032C-3E69-4987-B832-4C24439F092D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CE82032C-3E69-4987-B832-4C24439F092D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CE82032C-3E69-4987-B832-4C24439F092D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CE82032C-3E69-4987-B832-4C24439F092D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
