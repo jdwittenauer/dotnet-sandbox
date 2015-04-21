@@ -159,7 +159,6 @@ namespace Sandbox.Reactive
                       .Switch();
             
             // Synchronize with the UI thread and populate the ListBox or signal an error
-            
             using (result.ObserveOn(listBox).Subscribe(
                 words => { 
                     listBox.Items.Clear();
